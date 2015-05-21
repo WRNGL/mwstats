@@ -4,7 +4,7 @@ import sqlite3
 
 player = raw_input('Enter your ingame nickname: ')
 
-my_address = 'http://team.alpha-legion.pro/profile.html'
+my_address = 'http://team*******/profile.html'
 html_page = urlopen(my_address)
 html_text = html_page.read()
 start_tag = '<tbody>'

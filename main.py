@@ -1,6 +1,6 @@
 import requests, urllib2, re, sqlite3, getpass
 from urllib import urlopen
-
+from datetime import datetime, date
 
 LOGIN_URL = 'https://mwomercs.com/do/login'
 
@@ -47,14 +47,16 @@ cbills = mah_list[3]
 exp = mah_list[4]
 win = mah_list[5]
 lose = mah_list[6]
+tiem = datetime.now()
+
 
 winlose_values = (
-	player, mc, kill, death, cbills, exp, win, lose
+	player, mc, kill, death, cbills, exp, win, lose, tiem
 	)
 
 connection = sqlite3.connect('mwo.db')
 c = connection.cursor()
 
-c.execute("INSERT INTO BaseStats VALUES(?, ?, ?, ?, ?, ?, ?, ?)", winlose_values)
+c.execute("INSERT INTO BaseStats VALUES(?, ?, ?, ?, ?, ?, ?, ?, ?)", winlose_values)
 connection.commit()
 print 'All your stats are belong to us, ',player, '!' 

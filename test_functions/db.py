@@ -13,7 +13,7 @@ from urllib2 import urlopen
 </tr>
 '''
 
-my_address = 'http://team.alpha-legion.pro/profile.html'
+my_address = 'http://team.*****/profile.html'
 html_page = urlopen(my_address)
 
 html_text = html_page.read()
