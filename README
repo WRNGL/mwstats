@@ -1,0 +1,6 @@
+This is a simple script for tracking your MWO stats
+Currently it tracks only base stats like k/d, w/l and money.
+
+Instructions:
+1. Create db
+2. Run script
